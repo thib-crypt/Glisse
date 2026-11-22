@@ -1,0 +1,15 @@
+# Build products
+build/
+build-release/
+dist/
+DerivedData/
+.build/
+.swiftpm/
+
+# Xcode user state
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# macOS
+.DS_Store
