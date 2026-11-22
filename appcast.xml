@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Glisse</title>
+    <link>https://github.com/thib-crypt/Glisse</link>
+    <item>
+      <title>Glisse 1.0</title>
+      <pubDate>Sun, 22 Nov 2026 17:32:31 +0000</pubDate>
+      <sparkle:version>2</sparkle:version>
+      <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/thib-crypt/Glisse/releases/tag/v1.0</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<ul>
+<li>Automatic updates with Sparkle (appcast on GitHub, EdDSA-signed notarized DMGs)</li>
+<li>Glisse 1.0: menu-bar timer set by dragging from the icon</li>
+</ul>]]></description>
+      <enclosure url="https://github.com/thib-crypt/Glisse/releases/download/v1.0/Glisse-1.0.dmg" sparkle:edSignature="4I4LZQKtQdW+JqdN8Rdy0k9s/u8HHqi1AnOpe/HCYt1GQLQkZR9tVsKeFfFmHm4L31rKEaOZF18jj+xQ8aXFDQ==" length="2376125" type="application/octet-stream"/>
+    </item>
+  </channel>
+</rss>
