@@ -16,5 +16,9 @@
     <key>LSUIElement</key><true/>
     <key>NSPrincipalClass</key><string>NSApplication</string>
     <key>NSHumanReadableCopyright</key><string>© 2026 Thibault Thevenin</string>
+    <key>SUFeedURL</key><string>https://raw.githubusercontent.com/thib-crypt/Glisse/main/appcast.xml</string>
+    <key>SUPublicEDKey</key><string>QHaJUYJvDIo9rTKXniXZqOJ3xN84d2U/5BjJnu8EbZw=</string>
+    <key>SUEnableAutomaticChecks</key><true/>
+    <key>SUScheduledCheckInterval</key><integer>86400</integer>
 </dict>
 </plist>

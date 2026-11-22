@@ -20,6 +20,11 @@ Allow notifications on first launch to be alerted when a timer ends.
 - **Frugal**: no polling — a single one-shot wake-up is scheduled for the next visible change; no timer, no wake-up.
 - Works with the macOS 26 system-rendered menu bar (reads the hardware mouse state while dragging).
 
+## Updates
+Glisse updates itself with [Sparkle](https://sparkle-project.org): it checks
+[`appcast.xml`](appcast.xml) once a day (and on demand from « Rechercher les mises à jour… »), downloads the new DMG from
+GitHub Releases, verifies its EdDSA signature and Apple notarization, then replaces and relaunches the app.
+
 ## Build
 Requirements: Xcode 16+ / Swift 5.10 (SwiftPM, no Xcode project).
 ```
@@ -31,10 +36,12 @@ swift scripts/make_icon.swift Resources && iconutil -c icns Resources/AppIcon.ic
 ## Release
 ```
 scripts/release.sh            # dist/Glisse-<version>.dmg — hardened runtime, signed, notarized, stapled
-scripts/release.sh --publish  # + tag v<version> and GitHub Release with the DMG
+scripts/release.sh --publish  # + tag v<version>, GitHub Release with the DMG, appcast.xml pushed (update goes live)
 ```
-The version is `CFBundleShortVersionString` in `Resources/Info.plist`. Notarization uses the Keychain profile `notary`
-(`xcrun notarytool store-credentials notary --apple-id <apple-id> --team-id PG46BWSK3T`, once).
+The version is `CFBundleShortVersionString` in `Resources/Info.plist`. Only that version needs bumping: the build number Sparkle compares is the commit count.
+Notarization uses the Keychain profile `notary`
+(`xcrun notarytool store-credentials notary --apple-id <apple-id> --team-id PG46BWSK3T`, once); the update signature uses the Sparkle EdDSA key in the
+Keychain (`generate_keys`, once — back it up with `generate_keys -x <file>`).
 
 ## License
 [MIT](LICENSE)

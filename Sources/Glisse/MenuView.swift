@@ -68,6 +68,8 @@ struct MenuView: View {
                 Toggle("Décompte dans la barre des menus", isOn: $showCountdown)
                 Toggle("Retour haptique", isOn: $haptics)
                 Toggle("Ouvrir à la connexion", isOn: $launchAtLogin)
+                Divider()
+                Button("Rechercher les mises à jour…") { Updater.shared.checkForUpdates() }
             } label: {
                 Image(systemName: "gearshape.fill")
             }
